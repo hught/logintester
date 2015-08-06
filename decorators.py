@@ -2,9 +2,9 @@
 from functools import wraps
 
 def check_type(func):
-    def func_wrapper():
+    def func_wrapper(composure='cool'):
         func.name = 'huw'
-        return func
+        return func()
     return func_wrapper
 
 def pretty_printer(tag):
@@ -28,6 +28,7 @@ class Animal(object):
     maintype = 'animal'
 
     def __init__(self, composure='cool and mellow'):
+        print('i am here')
         self.composure = composure
 
 #cat = Animal()
